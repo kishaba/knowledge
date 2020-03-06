@@ -40,7 +40,10 @@ module.exports = app => {
     }
   }
   const withPath = categories => {
-    const getParent = (categories)
+    const getParent = (categories, parentId) => {
+      let parent = categories.filter(parent => parent.id === parent.Id)
+      return parent.length ? parent[0] : null
+    }
   }
 
 }
